@@ -1,0 +1,66 @@
+[  
+  {
+    "account_id": "39",
+    "street_address": "216 North May",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60607",
+    "status": "active"
+  },
+  {
+    "account_id": "40",
+    "street_address": "625 W Adams St",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60661",
+    "status": "deactivated"
+  },
+  {
+    "account_id": "41",
+    "street_address": "151 N Franklin St",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60606",
+    "status": "active"
+  },
+  {
+    "account_id": "42",
+    "street_address": "216 N May St",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60607",
+    "status": "active"
+  },
+  {
+    "account_id": "43",
+    "street_address": "151 N Franklin St",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60606",
+    "status": "deactivated"
+  },
+  {
+    "account_id": "44",
+    "street_address": "216 N May Street",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60607",
+    "status": "never_active"
+  },
+  {
+    "account_id": "45",
+    "street_address": "515 North State",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60654",
+    "status": "deactivated"
+  },
+  {
+    "account_id": "46",
+    "street_address": "515 N State St",
+    "city": "Chicago",
+    "state": "IL",
+    "postal_code": "60607",
+    "status": "active"
+  }
+]
