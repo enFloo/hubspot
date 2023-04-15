@@ -125,7 +125,7 @@ const batchContacts = [];
         json: true };
         request(option2, function (error, response, body) {
             if (error) throw new Error(error);
-            return;
+            return; 
         });
     
     }
