@@ -6,6 +6,7 @@ const hubspotClient = new hubspot.Client({ developerApiKey: 'b9a0493b-adf1-4ed8-
 const deactivatedPropertyIds = [];
 const deactivatedUsers = [];
 const batchContacts = [];
+let options;
 
 (async function() {
     //Gathers deactivated property's account_ids
@@ -82,7 +83,8 @@ const batchContacts = [];
     formatHubspotContacts();
 
     //formatted contacts are batched to hubspot
-    const options = {
+    async function batchAllContacts(){
+        options = {
             method: 'POST',
             url: 'https://api.hubapi.com/contacts/v1/contact/batch/',
             headers: {  
@@ -104,11 +106,12 @@ const batchContacts = [];
         } catch(error){
             console.error(error)
         }
-    
-    
-    
+    }
+        
+    await batchAllContacts()
+
     //batchedContacts are individually added to hubspot list
-    for(let i = 0; i < deactivatedUsers.length; i++){
+    for(let i = 0; i < options.body.length; i++){
         const option2 = {
             method: 'POST',
             url: 'https://api.hubapi.com/contacts/v1/lists/3/add',
@@ -118,9 +121,12 @@ const batchContacts = [];
             },
             body:
             {
-                "vids": 
-                   [deactivatedUsers[i].id]
-                ,
+                "vids": [
+                    options.body[i].vid
+                ],
+                "properties": [
+                    options.body[i].properties
+                ],
               }, 
         json: true };
         request(option2, function (error, response, body) {
