@@ -30,7 +30,7 @@ const batchContacts = [];
 
     //Gathers Users associated with deactivated properties
     async function readUserFile(deactivatedPropertyIds){
-        try{
+        try{ 
             const jsonData = await fs.readFileSync('./data/users.json', 'utf8');
             const userData = await JSON.parse(jsonData);
 
