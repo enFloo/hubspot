@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/88054514/232194875-888ac1a6-4dce-4a35-
 
 ## Contacts being added to Hubspot list
 
-Screenshots:
+Screenshot:
 
 https://user-images.githubusercontent.com/88054514/232194874-62d2705c-5b98-4d7c-a112-ca9cf23d4a03.png
 https://user-images.githubusercontent.com/88054514/232194846-f70825cf-567d-4c54-ba9b-9460aa814389.png
