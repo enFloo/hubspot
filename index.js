@@ -1,7 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const fs = require('fs');
 const request = require('request');
 const hubspot = require('@hubspot/api-client');
-const hubspotClient = new hubspot.Client({ developerApiKey: 'b9a0493b-adf1-4ed8-bad9-2ef2a949d11c'});
+const hubspotClient = new hubspot.Client({ developerApiKey: process.env.MYDEVELOPERAPIKEY});
 
 const deactivatedPropertyIds = [];
 const deactivatedUsers = [];
@@ -89,7 +91,7 @@ let options;
             url: 'https://api.hubapi.com/contacts/v1/contact/batch/',
             headers: {  
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer pat-na1-657d29b9-001e-4dcc-85d6-2f88b07b13f6`  
+                'Authorization': process.env.HUBSPOTAUTHORIZATIONKEY  
             },
             body: batchContacts,
         json: true };
@@ -117,7 +119,7 @@ let options;
             url: 'https://api.hubapi.com/contacts/v1/lists/3/add',
             headers: {  
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer pat-na1-657d29b9-001e-4dcc-85d6-2f88b07b13f6`  
+                'Authorization': process.env.HUBSPOTAUTHORIZATIONKEY  
             },
             body:
             {
@@ -130,6 +132,7 @@ let options;
               }, 
         json: true };
         request(option2, function (error, response, body) {
+            console.log(option2)
             if (error) throw new Error(error);
             return; 
         });
